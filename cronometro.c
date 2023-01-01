@@ -1,4 +1,5 @@
 //esse programa tem duas funcoes, cronometrar quanto tempo a pessoa levou para terminar o jogo e encerrar o jogo se ela levar mais de um determinado tempo, melhor nao fazer um cronometro; vai dar muito mais trabalho 
+//abandonado
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
