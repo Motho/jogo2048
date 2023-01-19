@@ -21,8 +21,9 @@ posso colocar um timer de tempo maximo; usando o time.h, nada de timer
 um menu inicial que vai ser o hub, dessa forma a pessoa se quiser ver a pontuacao antiga ela podera entrar no hub
 pra ser mais hardcore dava para fazer no menu uma opcao de mudanca de fonte, colocar som(com escape key \a)
 basicamente vai existir settings no menu 
-coisas fodas : cinder c++ library,cairo c library, 									
+coisas fodas : cinder c++ library,cairo c library
 
+ Retirar os cursores e tempo
 									
 								________________________________
 								|                              |
