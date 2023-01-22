@@ -5,12 +5,12 @@
 int menu(void){
 	char jogo[]= "JOGAR(0)",tabela[]= "TABELA(1)";
   int escolha; 
-	//duas coisas ela retorna jogo ou tabela
-  printf("|-----------------------------------------|");
+
+        printf("|-----------------------------------------|");
 	printf("|                   |                     |");
 	printf("|                   |                     |");
 	printf("|                   |                     |");
-	printf("|         %s        |          %s         |",jogo,tabela);
+	printf("|      JOGAR(0)     |       TABELA(1)     |");
 	printf("|                   |                     |");
 	printf("|                   |                     |");
 	printf("|                   |                     |");
