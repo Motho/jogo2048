@@ -2,19 +2,29 @@
 #include<string.h>
 #include<stdlib.h>
 #include<math.h>
-#include<menu.h>
+#include "menu.h"
 
 struct jogador{
 	int score;//quanto pontuou
 	char nome[];//o nome que a pessoa escolheu ser registrada
-}player[5];//ele vai guardar os 6 jogadores 
+}player[5];//ele vai guardar os 5 jogadores 
 
-struct matriz{
-	int posicao[4][4];//isso aqui esta certo porque as posicoes [4][4] nao serao ocupadas
-	//math.h funcao pow(base,expoente);os valores de tabuleiro serao 2^10 	
+struct matriz{ //tabuleiro de pecas
+	int posicao[4][4];	
 }tabuleiro;
 
-int estado_do_jogo(void){	
+//Faz gerar blocos de valor 2(maior probabilidade) e 4(menor probabilidade) numa posicao aleatoria vazia no tabuleiro
+
+void surge_peca(void){
+  int numero= rand() % 16, bloco4= 4, bloco2= 2;
+  int p1= rand()%4,p2= rand()%4;
+	if(numero> 14 && tabuleiro.posicao[p1][p2] ==0) tabuleiro.posicao[p1][p2]= bloco4;
+	else surge_peca();
+	if(numero< 14 && tabuleiro.posicao[p1][p2] == 0) tabuleiro.posicao[p1][p2]= bloco2;
+	else surge_peca();
+}
+
+int estado_do_jogo(void){	//checa condicoes de vitoria e derrota alem de pegar o nome do jogador vencedor
 	
 	int i,j, multiplicacao_das_posicoes= 1;
 	for(i = 0; i<4; i++){
@@ -22,10 +32,8 @@ int estado_do_jogo(void){
 			multiplicacao_das_posicoes= multiplicacao_das_posicoes*tabuleiro.posicao[i][j];
 			if(tabuleiro.posicao[i][j] == 2048){//verifica se venceu, a condicao de vitoria devera ser colocada primeiro
 				printf("Voce venceu ensira seu nome");
-				scanf("%s",player[0].nome[49]);//nome da pessoa
-				player[0].score;//score do jogador que participou
-				return ;//
-				
+				scanf("%s",player[0].nome);//nome da pessoa
+				return player[0].score;//quantos pontos o jogador fez
 			}
 			if(multiplicacao_das_posicoes!= 0) return 0;//derrota encerra o programa
 		}
@@ -33,36 +41,40 @@ int estado_do_jogo(void){
 
 }
 
-void tabela(int pontuacao,int nome){
+void tabela(int pontuacao,char nome[]){
 
+		player[0].score= pontuacao;
+	char escolha;
 	printf("|--------------------------------------------------|                press q para encerrar   ");
 	printf("|                         |                        |");
 	printf("|          PONTOS	        |           NOME         |");
 	printf("|                         |                        |");
 	printf("|--------------------------------------------------|");
 	printf("|                         |                        |");
-	printf("|            %d           |           %d           |");
+	printf("|            %d           |           %s           |",player[0].score, player[0].nome);
 	printf("|                         |                        |");
 	printf("|--------------------------------------------------|");
-//precisa de uma opcao para 
+
+	scanf("%c",&escolha);
 }
 
-}
 int jogo(){// as mecanicas do jogo comecam aqui
 {//vai entrar o struct matriz aqui dentro
 	char movimento;
-
- /* O script vai ser o seguinte: as matrizes vao conter zero no momento que o jogo comeca um 2 aparece em um elemento da matriz qualquer"vou precisar de uma biblioteca que de randomizacao", quando e apertado a tecla para cima os numeros precisam estar fora das bordas se nao eles nao iram mover, quando os numeros estao fora das bordas o numero ir subir e caso tenha um numero em cima dele o numero de cima ira subir primeiro e se os numeros forem iguais eles iam somar e a posicao resultante sera a borda, detalhe a posicao resultante de cada elemento e variavel dependendo do sentido da soma dos numeros, detalhe todos os numeros sao movidos na mesma direcao e so existe a opcao de se mover na direcao desejado ou ele nao se move, de qualquer forma se nenhum se mover entao o 2 randomizado nao ira aparecer
-*/
-	//
 	int begin;
 	while(begin){
-	//rand(matriz);so que so em uma var
-	//loop para veerificar as posicoes com zero e nao printar elas
 	//calcular a pontuacao sera
-
+    
 		estado_do_jogo();
-	printf("|-------------------------------------------------------------------------|");//minutos e seg
+		if(estado_do_jogo() == 1){
+		  printf("Voce venceu");
+			tabela(player[0].score,player[0].nome);
+		}
+  
+  surge_peca();
+
+
+	printf("|-------------------------------------------------------------------------|");
 	printf("|                 |                  |                  |                 |");
 	printf("|                 |                  |                  |                 |");
 	printf("|       %d        |        %d        |        %d        |       %d        |",tabuleiro.posicao[0][0],tabuleiro.posicao[0][1],tabuleiro.posicao[0][2], tabuleiro.posicao[0][3]);
@@ -92,26 +104,39 @@ int jogo(){// as mecanicas do jogo comecam aqui
 	printf("|                 |                  |                  |                 |");
 	printf("|-------------------------------------------------------------------------|");
 	printf("                                  'q' para sair                            ");
-	scanf("%c", movimento);
-	if(movimento == 'w'){
-    //faz um loop pela matriz de forma diagonal
-	  for(;;);
+	scanf("%c", &movimento);
+ 
+  //Parte responsavel pela movimentacao, as colunas se movimentam
+  int i,j;
+
+
+       if(movimento == 'w'){
+       for(i=0;i<3;i++)
+				 for(j=0;j<4;j++)
+					 if(tabuleiro.posicao[j][i] == tabuleiro.posicao[j][i+1]){
+					   tabuleiro.posicao[j][i+1]= tabuleiro.posicao[j][i+1] +tabuleiro.posicao[j][i];
+					 }
+			     //eles forem diferentes e diferentes de zero 
+     } 
+      if(movimento == 'a'){
+    
+      }
+      if(movimento == 'd'){
+       for(i=0;i<4;i++)
+				 for(j=0;j<4;j++)
+				   if();
+      }
+      if(movimento == 's'){
+      }
+			if(movimento == 'q') menu();
 
 	}
-  if(movimento == 's');
-  if(movimento == 'a');
-  if(movimento == 'd');
-	if(movimento == 'q') return menu();
-	}
-
-}
-int main()// vai ser realizado as operacoes aqui dentro 
+int main(void)// vai ser realizado as operacoes aqui dentro 
 {
-	menu();//comeca aqui
+	menu();//comeca aqui, ele retorna 0 para jogar e 1 para tabela
 	jogo();//opcao do menu
-	tabela();//opcao do menu, vai receber o arg de entrada e receber um arg de score
+	//opcao do menu, vai receber o arg de entrada e receber um arg de score
 	//mais coisa a ser adicionada a funcao main
-  //if(estado_do_jogo == 
 
 return 0;
 }
