@@ -18,4 +18,4 @@ A estrutura do programa consiste em:
   Tabela: Guarda o nome da pessoa que consegui completar o jogo
   
   Para compilar o projeto é necessario somente o compilador gcc 
-#TECNOLOGIAS
+# TECNOLOGIAS
