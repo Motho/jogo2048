@@ -13,11 +13,11 @@ mesmo incompativeis.
 A estrutura do programa consiste em:
   Menu: É um hub para entrar no jogo e a tabela de pontuacao
   
-  Jogo: 
+  Jogo: Contem o tabuleiro junto dos algoritimos principais do programa
   
-  Tabela: Guarda o nome da pessoa que consegui completar o jogo
+  Tabela: Guarda o nome da pessoa que conseguiu completar o jogo
   
-  Para compilar o projeto é necessario somente o compilador gcc
+
 # Contribuidores  
   Nicolas Rios e
   Filipe Braz
