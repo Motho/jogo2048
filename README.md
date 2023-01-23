@@ -1,7 +1,7 @@
 # jogo2048
 Ufes materia programacao 1 trabalho 1
 
-Integrantes Nicolas Rios e Felipi Braz
+Integrantes:Nicolas Rios e Felipi Braz
 
 
 O jogo escolhido foi o 2048
@@ -11,13 +11,11 @@ No prototipo do programa só foi utilizado funcoes da biblioteca padrao C devido
 mesmo incompativeis.
 
 A estrutura do programa consiste em:
-  Menu
+  Menu: É um hub para entrar no jogo e a tabela de pontuacao
   
+  Jogo: 
   
-  Jogo
-  
-  
-  Tabela
+  Tabela: Guarda o nome da pessoa que consegui completar o jogo
   
   
 1- o jogo acaba em vitoria quando o numero 2048 é atingido e derrota caso todas as posicoes ocupadas sejam dif de zero ou o temp acabar
