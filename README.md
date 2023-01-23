@@ -19,9 +19,8 @@ A estrutura do programa consiste em:
   
   Para compilar o projeto é necessario somente o compilador gcc
 # Contribuidores  
-  Nicolas Rios
+  Nicolas Rios e
   Filipe Braz
-
 # TECNOLOGIAS
 - `GCC compiler` 
 - `Make`
