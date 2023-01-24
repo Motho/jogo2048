@@ -31,6 +31,7 @@ int estado_do_jogo(void){	//checa condicoes de vitoria e derrota alem de pegar o
 			multiplicacao_das_posicoes= multiplicacao_das_posicoes*tabuleiro.posicao[i][j];
 			if(tabuleiro.posicao[i][j] == 2048) return 1;//verifica se venceu, a condicao de vitoria devera ser colocada primeiro
 			if(multiplicacao_das_posicoes!= 0) return 2;//derrota encerra o programa
+			return 3;
 		}//falta terminar a de
   }
 
