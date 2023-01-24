@@ -31,7 +31,7 @@ int estado_do_jogo(void){	//checa condicoes de vitoria e derrota alem de pegar o
 			multiplicacao_das_posicoes= multiplicacao_das_posicoes*tabuleiro.posicao[i][j];
 			if(tabuleiro.posicao[i][j] == 2048) return 1;//verifica se venceu, a condicao de vitoria devera ser colocada primeiro
 			if(multiplicacao_das_posicoes!= 0) return 2;//derrota encerra o programa
-		}
+		}//falta terminar a de
   }
 
 }
@@ -71,9 +71,9 @@ int jogo(){// as mecanicas do jogo comecam aqui
 		  printf("Voce venceu. Insira seu nome;");
 			scanf("%s",player->nome);
 			tabela(player[0].nome);
-		if(estado_do_jogo() == 2){
-      surge_peca();
 		}
+		if(estado_do_jogo() == 2) return 0;
+		if(estado_do_jogo() == 3) surge_peca();
 	printf("|-------------------------------------------------------------------------|");
 	printf("|                 |                  |                  |                 |");
 	printf("|                 |                  |                  |                 |");
