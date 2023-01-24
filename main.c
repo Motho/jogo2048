@@ -109,14 +109,14 @@ int jogo(){// as mecanicas do jogo comecam aqui
   //Parte responsavel pela movimentacao, as colunas se movimentam
   int i,j;
 
-
+//incompleto
        if(movimento == 'd'){
        for(i=0;i<3;i++)
 				 for(j=0;j<4;j++)
 					 if(tabuleiro.posicao[j][i] == tabuleiro.posicao[j][i+1] && (tabuleiro.posicao[j][i] != tabuleiro.posicao[j][i+1]) &&  ){
 					   tabuleiro.posicao[j][i+1]= tabuleiro.posicao[j][i+1] +tabuleiro.posicao[j][i];
 						 tabuleiro.posicao[j][i]= 0;
-						 break;
+						 break;//lugar errado
 					 }
 			     //eles forem diferentes e diferentes de zero e para quando realizar a operacao de troca
      } 
