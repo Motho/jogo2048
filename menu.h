@@ -3,7 +3,7 @@
 
 
 int menu(void){
-	char jogo[]= "JOGAR(0)",tabela[]= "TABELA(1)";
+	char jogo[]= "JOGAR(2)",tabela[]= "TABELA(1)";
   int escolha; 
 	//duas coisas ela retorna jogo ou tabela
   printf("|-----------------------------------------|");
@@ -17,7 +17,7 @@ int menu(void){
 	printf("|-----------------------------------------|");
  
   scanf("%d",&escolha);
-	if(escolha == 0) return 0;
+	if(escolha == 2) return 2;
 	if(escolha == 1) return 1;
   menu();
 }
