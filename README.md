@@ -16,7 +16,6 @@ A estrutura do programa consiste em:
   Jogo: Contem o tabuleiro junto dos algoritimos principais do programa como o movimento das pecas, randomizacao, etc.
   
   Tabela: Guarda o nome da pessoa que conseguiu completar o jogo(no momento ela será implementada devidamente no trabalho dois
-  
 
 # Contribuidores  
   Nicolas Rios e
