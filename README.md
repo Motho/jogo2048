@@ -13,9 +13,9 @@ mesmo incompativeis.
 A estrutura do programa consiste em:
   Menu: É um hub para entrar no jogo e a tabela de pontuacao
   
-  Jogo: Contem o tabuleiro junto dos algoritimos principais do programa
+  Jogo: Contem o tabuleiro junto dos algoritimos principais do programa como o movimento das pecas, randomizacao, etc.
   
-  Tabela: Guarda o nome da pessoa que conseguiu completar o jogo
+  Tabela: Guarda o nome da pessoa que conseguiu completar o jogo(no momento ela será implementada devidamente no trabalho dois
   
 
 # Contribuidores  
