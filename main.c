@@ -126,6 +126,7 @@ int jogo(){// as mecanicas do jogo comecam aqui
 					 }
 					 if(tabuleiro.posicao[j][i] != 0 && (tabuleiro.posicao[j][i+1] != tabuleiro.posicao[j][i])) continue;
 					 //talvez precise de mais um if statement if(tabuleiro.posicao[j][i]== 0) continue;
+	                                 
 			 }
 				tabuleiro.posicao[j][i]= 0;//os dois primeiro if statements querem que voce resete tab.pos[j][i], para evitar escrever duas vezes, botar no loop exterior
      } 
@@ -153,7 +154,9 @@ int jogo(){// as mecanicas do jogo comecam aqui
 			if(movimento == 'q') menu();
 	}
 int main(void){
-	menu();// O programa se inicia no menu
-	if ( menu()== 1) jogo();//se o menu devolver 1 o jogo se inicia
+	//menu();// O programa se inicia no menu
+	jogo();
+	//if ( menu()== 1) jogo();//se o menu devolver 1 o jogo se inicia
+	//tabela(player.nome);
 return 0;
 }
