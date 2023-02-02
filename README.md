@@ -18,8 +18,7 @@ A estrutura do programa consiste em:
   Tabela: Guarda o nome da pessoa que conseguiu completar o jogo(no momento ela será implementada devidamente no trabalho dois
 
 # Contribuidores  
-  Nicolas Rios e
-  Filipe Braz
+  Nicolas Rios
 # TECNOLOGIAS
 - `GCC compiler` 
 - `Make`
