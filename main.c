@@ -56,7 +56,7 @@ int tabela(char nome[]){//Tabela que armazena o nome da pessoa, no trabalho 2 el
 	printf("|                         |\n");
   printf("|-------------------------|\n");
 
-	scanf("%c",&escolha);
+	scanf(" %c",&escolha);
 
 	if(escolha == 'q') return 0;
 	else tabela(nome);
@@ -109,7 +109,7 @@ int jogo(/*int* op_menu*/){// as mecanicas do jogo comecam aqui
 	printf("|-------------------------------------------------------------------------|\n");
 	printf("                                  'q' para sair                            \n");
 	
-	scanf("%c", &movimento);
+	scanf(" %c", &movimento);
  
   //Parte responsavel pela movimentacao onde as colunas e as linhas se movimentam
   int i,j;
