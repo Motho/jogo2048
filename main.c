@@ -152,6 +152,9 @@ int jogo(/*int* op_menu*/){// as mecanicas do jogo comecam aqui
 }
 
 int main(void){
+	for(int i=0;i<4;i++)
+	  for(int j= 0;j<4;j++)
+	    tabuleiro.posicao[i][j]= 0;
 	//int opcao_menu= 1;//colocar o menu dentro do main,mudei para que sempre comece o jogo
 	//menu(&opcao_menu);// O programa se inicia no menu
 	//if (menu(&opcao_menu)== 1) jogo(&opcao_menu);//se o menu devolver 1 o jogo se inicia
