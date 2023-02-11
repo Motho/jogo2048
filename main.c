@@ -64,9 +64,8 @@ int tabela(char nome[]){//Tabela que armazena o nome da pessoa, no trabalho 2 el
 
 int jogo(/*int* op_menu*/){// as mecanicas do jogo comecam aqui
 	char movimento;
-	while(/**op_menu ==*/ 1){
+	while(1){
     
-		estado_do_jogo();
 		if(estado_do_jogo() == 1){
 		  printf("Voce venceu. Insira seu nome;");
 			return 0;
