@@ -11,7 +11,7 @@ A estrutura do programa consiste em:
   
 
 # Contribuidores  
-  Nicolas Rios Filipe BRAZ
+  Nicolas Rios Filipe Braz
 # TECNOLOGIAS
 - `GCC compiler` 
 - `Make`
