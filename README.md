@@ -1,11 +1,7 @@
 # jogo2048
-Ufes materia programacao 1 trabalho 1 (Projeto em processo de desenvolvimento)
-
-Integrantes:Nicolas Rios e Felipi Braz
-
+Ufes materia programacao 1(trabalho 1)
 
 O jogo escolhido foi o 2048
-foi feita somente uma header file para o projeto, o menu.h
 
 A movimentacao foi inspirada no trabalho 2048 do Antonio
 
@@ -15,7 +11,7 @@ A estrutura do programa consiste em:
   
 
 # Contribuidores  
-  Nicolas Rios
+  Nicolas Rios Filipe BRAZ
 # TECNOLOGIAS
 - `GCC compiler` 
 - `Make`
