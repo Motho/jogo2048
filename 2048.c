@@ -97,14 +97,6 @@ struct matriz{ //tabuleiro de pecas
 int surge_peca(void){
     int numero;
     int i, j;
- 
-// Parte responsavel por definir todas as posições do tabuleiro como 0(vazio)
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
-            tabuleiro.posicao[i][j] = 0;
-        }
-    }
-// Parte respons
 
     numero== rand() % 10; // comando rand() sorteia de números até 10
 
@@ -201,6 +193,12 @@ int jogo(){// as mecanicas do jogo comecam aqui
     }
 }
 int main(void){
+	// Parte responsavel por definir todas as posições do tabuleiro como 0(vazio)
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            tabuleiro.posicao[i][j] = 0;
+        }
+    }
 
   jogo();
 }
